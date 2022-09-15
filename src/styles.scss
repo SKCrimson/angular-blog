@@ -179,16 +179,16 @@ img {
   color: #fff;
 }
 
-.alert-info {
-  background: var(--info-color);
-  color: #fff;
-}
-
 .btn-success,
 .bg-success,
 .badge-success,
 .alert-success {
   background: var(--success-color);
+  color: #fff;
+}
+
+.alert-info {
+  background: var(--info-color);
   color: #fff;
 }
 
@@ -300,4 +300,3 @@ table th {
     }
   }
 }
-
