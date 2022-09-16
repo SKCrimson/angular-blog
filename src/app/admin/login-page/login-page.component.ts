@@ -22,6 +22,8 @@ export class LoginPageComponent implements OnInit {
     this.route.queryParams.subscribe((params: Params) => {
       if (params['loginAgain']) {
         this.message = 'Please, login in admin system';
+      } else if (params['authFailed']) {
+        this.message = 'Your auth failed'
       }
     });
 
