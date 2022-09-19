@@ -1,7 +1,7 @@
 <div *ngIf="posts.length; else loading">
 
   <div class="form-control">
-    <input type="text" placeholder="Search post..">
+    <input type="text" placeholder="Search post.." [(ngModel)]="searchStr">
   </div>
 
   <table>
@@ -15,7 +15,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let post of posts; let id = index">
+    <tr *ngFor="let post of posts | searchPosts: searchStr; let id = index">
       <th>{{id + 1}}</th>
       <th>{{post.author}}</th>
       <th>{{post.title}}</th>
