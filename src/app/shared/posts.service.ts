@@ -46,11 +46,13 @@ export class PostsService {
           return {
             ...post,
             id,
-            // title: post.title,
-            // author: post.author,
             date: new Date(post.date)
           }
         }));
+  }
+
+  update(post: Post) {
+    return this.http.patch<Post>(`${environment.fbDbUrl}/posts/${post.id}.json`, post);
   }
 
   remove(id: string): Observable<void> {

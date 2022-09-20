@@ -16,7 +16,12 @@
       <quill-editor formControlName="text"></quill-editor>
     </div>
 
-    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Edit post</button>
+    <div class="form-control ">
+      <p>Author: <label>{{post.author}}</label></p>
+      <p>Date: <label>{{post.date | date: 'medium'}}</label></p>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid || submitted">Edit post</button>
   </form>
 </div>
 
