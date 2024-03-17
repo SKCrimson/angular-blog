@@ -1,7 +1,7 @@
 export interface User {
   email: string,
   password: string,
-  returnSecureToken?: boolean
+  returnSecureToken: boolean
 }
 
 export interface FirebaseAuthResponse{
@@ -17,6 +17,6 @@ export interface Post {
   date: Date
 }
 
-export interface FbCrearteResponse{
+export interface FbCreateResponse {
   name: string
 }
